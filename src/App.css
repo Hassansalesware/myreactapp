@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+  --red: #ED1C24;
+  --black: #0C0E0C;
+  --lightblack:#141414;
+  --white:#FFF; 
   }
+
+  body { 
+    background-color: var(--black); 
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .container{
+    min-width: 1280px;
+  }
+  
+  H1, H2, H3, H4, H5{
+    font-family: 'Syne', sans-serif;
+    color: var(--white); 
+  }
+  h1{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.26px;
+  }
+
+  P{
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--white); 
+    line-height: 38.4px;
+  }
+
+  span{
+    color: var(--red);
+  }
+
+  /* navbar */
+
+  .navbar{
+    background-color: var(--red) !important; 
+    height: 95px;
+  }
+  .navbar-nav li a{
+    color: var(--white) !important; 
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: normal;
+  }
+
+
+  /* Home page css */
+
+  .herobanner{
+    background-image: url(C:\Users\musam\OneDrive\Desktop\Reacttutorial\mtfirstreactapp\src\images\banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+    background-position:center;
+  }
+
+  .second-sec, section.first-sec {
+    padding: 100px 0px;
+}
+  .second-sec p:before, .first-sec p:before {
+    content: '';
+    width: 4px;
+    height: 259px;
+    background-color: var(--red);
+    position: absolute;
+    left: -30px;
+  }
+  .first-sec h4, .second-sec h4{
+    position: relative;
+    padding-left: 30px;
+  }
+  .second-sec h4:before, .first-sec h4:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: var(--red);
+    position: absolute;
+    left: 0px;
+    border-radius: 60%;
+    top: 6px;
+  }
+  .first-sec h1, .second-sec h1{
+    margin:20px 0px ;
+  }
+
+
+  /* private party */
+
+  .herobanner2{
+    background-image: url(C:\Users\musam\OneDrive\Desktop\Reacttutorial\mtfirstreactapp\src\images\privatepartybanner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+    background-position:center;
+  }
+
+
+  /* Slider */
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+    .swiper-slide {
+    flex-shrink: 0;
+    width: 30% !important;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    display: block;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 550px;
+  }
+  .patient-data tr th {
+    border: 1px solid white;
+    color: white;
+    width: 200px;
+    text-align: center;
+    background-color: #3a76cd;
+  }
+  .patient-data tr td {
+    border: 1px solid white;
+    color: white;
+    width: 200px;
+    text-align: center;
+  }
+  .invoice-data tr th {
+    width: 150px;
+  }
+  .invoice-data tr td {
+    width: 150px;
+
+  }
+  table.patient-data {
+    display: flex;
+    flex-flow: column;
+    padding: 40px 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+  /* sidebar */
+  .pat-page {
+    display: flex;
+}
+.sidebar {
+    background-color: #3a76cd;
+    max-width: 300px;
+}
+.sidebar span {
+  color: #FFF;
+  font-family: 'Syne';
+  font-size: 20px;
+}
+.main-sidebar {
+  max-width: 300px;
+}
+.sides{
+  width: 300px;
+}
+img.side-bar-icon {
+  width: 30px;
+}
+
+
+
+/* Form */
+
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  column-count: 2;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 50px;
+  margin: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* form input {
+  width: 45%;
+  height: 50px;
+  padding: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+} */

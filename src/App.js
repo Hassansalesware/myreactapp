@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import Home from './pages/home';
+import Privateparty from './pages/privateparty';
+import {Routes, Route} from 'react-router-dom'; 
+import Data from './pages/data';
+import Patient from './pages/Patient';
+import Doctor from './pages/doctor';
+import Invoice from './pages/invoice';
+import Edits from './pages/edits';
 
+
+let name="hassan";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <BrowserRouter>
+   
+    <Routes>
+      <Route path="/" element={<Home />} />
+        <Route path="privateparty" element={<Privateparty />}/>
+        <Route path="data" element={<Data />}/>
+        <Route path="patient" element={<Patient />}/>
+        <Route path="doctor" element={<Doctor />}/>
+        <Route path="invoice" element={<Invoice />}/>
+        <Route path="edits" element={<Edits />}/>
+    </Routes>
+
+  </BrowserRouter>
+
   );
 }
 
